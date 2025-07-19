@@ -1,1 +1,2 @@
-<CODE PRÉSENT DANS LE DOCUMENT – déjà inséré par l’utilisateur, vu dans le canvas>
+import pandas as pd
+import difflib
