@@ -1,0 +1,1 @@
+<CODE PRÉSENT DANS LE DOCUMENT – déjà inséré par l’utilisateur, vu dans le canvas>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Réconciliation de Données</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Réconciliation de Bases de Données</h1>
+    <form action="/reconcile" method="post" enctype="multipart/form-data">
+        <label>Base 1 (CSV) : <input type="file" name="file1" required></label>
+        <label>Base 2 (CSV) : <input type="file" name="file2" required></label>
+        <label>Champs à comparer (base 1, séparés par virgule) :
+            <input type="text" name="fields1" placeholder="nom,prenom,email" required>
+        </label>
+        <label>Champs à comparer (base 2, séparés par virgule) :
+            <input type="text" name="fields2" placeholder="nom,prenom,email" required>
+        </label>
+        <label>Seuil de similarité :
+            <input type="number" step="0.01" name="threshold" value="0.85" min="0" max="1">
+        </label>
+        <input type="hidden" name="lang" value="fr">
+        <button type="submit">Lancer la réconciliation</button>
+    </form>
+</body>
+</html>

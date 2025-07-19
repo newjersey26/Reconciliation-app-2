@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Reconciliation</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Data Reconciliation Tool</h1>
+    <form action="/reconcile" method="post" enctype="multipart/form-data">
+        <label>Dataset 1 (CSV): <input type="file" name="file1" required></label>
+        <label>Dataset 2 (CSV): <input type="file" name="file2" required></label>
+        <label>Fields to match (dataset 1, comma-separated):
+            <input type="text" name="fields1" placeholder="name,firstname,email" required>
+        </label>
+        <label>Fields to match (dataset 2, comma-separated):
+            <input type="text" name="fields2" placeholder="name,firstname,email" required>
+        </label>
+        <label>Similarity threshold:
+            <input type="number" step="0.01" name="threshold" value="0.85" min="0" max="1">
+        </label>
+        <input type="hidden" name="lang" value="en">
+        <button type="submit">Start Reconciliation</button>
+    </form>
+</body>
+</html>
